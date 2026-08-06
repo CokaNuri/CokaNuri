@@ -30,21 +30,15 @@ jobs:
           path: profile/stats-dark.svg
           token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
 
-      - name: Top languages card (light)
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&locale=kr
-          path: profile/top-langs-light.svg
-          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
-
-      - name: Top languages card (dark)
-        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&locale=kr&theme=tokyonight
-          path: profile/top-langs-dark.svg
-          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
+      # Custom script instead of the stock top-langs card: includes collaborator
+      # and org repos, weighted by my commit share (see scripts/gen-top-langs.mjs).
+      - name: Top languages cards
+        run: |
+          npm install --no-save @stats-organization/github-readme-stats-core@2.1.5
+          node scripts/gen-top-langs.mjs
+        env:
+          GH_TOKEN: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
 
       - name: Commit cards
         run: |
