@@ -5,11 +5,11 @@ FSRS 기반 학습 앱 **문득(moondeuk)** 을 만들고 있습니다.
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=CokaNuri&show_icons=true&theme=tokyonight&hide_border=true&locale=kr" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=CokaNuri&show_icons=true&hide_border=true&locale=kr" alt="GitHub Stats" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg" />
+    <img height="165" src="./profile/stats-light.svg" alt="GitHub Stats" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=CokaNuri&layout=compact&theme=tokyonight&hide_border=true&locale=kr" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CokaNuri&layout=compact&hide_border=true&locale=kr" alt="Top Languages" />
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg" />
+    <img height="165" src="./profile/top-langs-light.svg" alt="Top Languages" />
   </picture>
 </div>
