@@ -20,7 +20,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&locale=kr
           path: profile/stats-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Stats card (dark)
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
@@ -28,7 +28,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&locale=kr&theme=tokyonight
           path: profile/stats-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Top languages card (light)
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
@@ -36,7 +36,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&locale=kr
           path: profile/top-langs-light.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Top languages card (dark)
         uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
@@ -44,7 +44,7 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&locale=kr&theme=tokyonight
           path: profile/top-langs-dark.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
