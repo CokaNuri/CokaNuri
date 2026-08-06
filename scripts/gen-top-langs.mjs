@@ -8,7 +8,9 @@
 //      the default branch — repos I never committed to drop out naturally.
 //   3. Render with the official renderer for identical styling.
 import { writeFile, mkdir } from "node:fs/promises";
-import { renderTopLanguages } from "@stats-organization/github-readme-stats-core";
+// The package's exports map only exposes its index, which doesn't re-export
+// card renderers — import the built card module by file path instead.
+import { renderTopLanguages } from "../node_modules/@stats-organization/github-readme-stats-core/build/cards/top-languages.js";
 
 const token = process.env.GH_TOKEN;
 if (!token) throw new Error("GH_TOKEN is required");
