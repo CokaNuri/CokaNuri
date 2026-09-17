@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">정준영의 GitHub 통계, Rank: B+</title>
-        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  (작년) : 1045, PR 횟수: 328, 이슈 개수: 21, (작년) 기여: 12</desc>
+        <desc id="descId">받은 스타 수: 0, 전체 커밋 수  (작년) : 1057, PR 횟수: 337, 이슈 개수: 21, (작년) 기여: 12</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 119.39679130239134;
+        stroke-dashoffset: 119.24305920376516;
       }
     }
   
@@ -184,7 +184,7 @@
         x="174.01"
         y="12.5"
         data-testid="commits"
-      >1k</text>
+      >1.1k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -199,7 +199,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >328</text>
+      >337</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
